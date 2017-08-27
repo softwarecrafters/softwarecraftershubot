@@ -5,7 +5,8 @@ module.exports = (robot) ->
    appreciate if you tried to use that. Thanks!']
 
   robot.hear /guys/i, (res) ->
-    robot.messageRoom res.message.user.name, "Hello1!"
-    robot.send {room: res.message.user.name}, "Hello2!"
+    robot.reply "Hello! #{res.message.user.name}, #{res.message.user.room},#{res.message.user.room_id}"
+    robot.messageRoom res.message.user.room, "Hello1! #{res.message.user.room}"
+    robot.send {room: res.message.user.room_id}, "Hello2! #{res.message.user.room_id}"
 
 
