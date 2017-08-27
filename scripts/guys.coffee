@@ -5,8 +5,7 @@ module.exports = (robot) ->
    appreciate if you tried to use that. Thanks!']
 
   robot.hear /guys/i, (res) ->
-    room = res.envelope.user.name
-    robot.messageRoom room, 'Hi! "Guys" is easily replaced with a more gender-neutral "All". We\'d
-   appreciate if you tried to use that. Thanks!'
+    robot.messageRoom res.message.user.name, "Hello1!"
+    robot.send {room: res.message.user.name}, "Hello2!"
 
 
