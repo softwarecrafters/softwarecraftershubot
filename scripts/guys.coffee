@@ -5,6 +5,6 @@ module.exports = (robot) ->
    appreciate if you tried to use that. Thanks!']
 
   robot.hear /guys/i, (res) ->
-    res.send res.random guys
+    res.reply res.random guys
 
 
