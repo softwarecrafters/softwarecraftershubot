@@ -6,6 +6,7 @@ module.exports = (robot) ->
 
   robot.hear /guys/i, (res) ->
     room = res.envelope.user.name
-    robot.messageRoom room, res.random guys
+    robot.messageRoom room, 'Hi! "Guys" is easily replaced with a more gender-neutral "All". We\'d
+   appreciate if you tried to use that. Thanks!'
 
 
